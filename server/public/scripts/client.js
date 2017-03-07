@@ -30,4 +30,14 @@ self.addBook = function(){
   });
 }
 
+self.deleteBook = function(bookId){
+  $http({
+    method: 'DELETE',
+    url: '/books/delete/' + bookId
+  }).then(function(response){
+    console.log(response.data);
+    getBooks();
+  })
+}
+
 }]); //end of myApp controller

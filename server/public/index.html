@@ -34,6 +34,8 @@
         <td>{{book.author}}</td>
         <td>{{book.edition}}</td>
         <td>{{book.publisher}}</td>
+        <td><button ng-click="bc.deleteBook(book.id)">Delete</button></td>
+        <td><button>Save</button></td>
       </tr>
     </tbody>
   </table>
