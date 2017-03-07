@@ -7,6 +7,7 @@ self.bookList = [];
 self.newBook = {};
 
 getBooks();
+
 function getBooks(){
   $http({
     method: 'GET',
@@ -17,13 +18,16 @@ function getBooks(){
   });
 } //end of get request
 
-
-
-
-
-
-
-
-
+self.addBook = function(){
+  $http({
+    method: 'POST',
+    url: '/books/new',
+    data: self.newBook
+  }).then(function(response){
+    console.log(response);
+    getBooks();
+    self.newBook = {};
+  });
+}
 
 }]); //end of myApp controller

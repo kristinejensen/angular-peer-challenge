@@ -10,11 +10,12 @@
 
   <h1>Book Shelf</h1>
   <form id="newBookForm">
-    <input name="title" placeholder="Title">
-    <input name="author" placeholder="Author">
-    <input name="edition" placeholder="Edition">
-    <input name="publisher" placeholder="Publisher">
-    <button type="submit" id="newBookButton">Click here to add the book!</button>
+    <!-- <label>Title</label> -->
+    <input ng-model="bc.newBook.title" placeholder="Title">
+    <input ng-model="bc.newBook.author" placeholder="Author">
+    <input ng-model="bc.newBook.edition" placeholder="Edition">
+    <input ng-model="bc.newBook.publisher" placeholder="Publisher">
+    <button ng-click="bc.addBook()">Click here to add the book!</button>
   </form>
   <table>
     <thead>
