@@ -9,6 +9,7 @@ var port = 5000;
 app.use(express.static('server/public'));
 
 app.use(bodyParser.urlencoded({extended: true})); // this creates req.body
+app.use(bodyParser.json());
 
 app.use('/books', books);
 
