@@ -40,4 +40,17 @@ self.deleteBook = function(bookId){
   })
 }
 
+self.saveBook = function(bookObject){
+  $http({
+    method: 'PUT',
+    url: '/books/save/' + bookObject.id,
+    data: bookObject
+  }).then(function(response){
+    console.log(response.data);
+    getBooks();
+  })
+}
+
+
+
 }]); //end of myApp controller
